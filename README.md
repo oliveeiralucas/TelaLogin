@@ -1,7 +1,5 @@
 # telaLogin
 
-<img src="exemplo-image.png" alt="exemplo imagem">
-
 > Esse é um projeto desenvolvido para testar e demonstrar nossas habilidades em HTML e CSS, consiste em uma página de Login e uma de Cadastro
 
 ### Ajustes e melhorias
