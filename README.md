@@ -8,9 +8,9 @@
 
 O projeto ainda está em desenvolvimento e as próximas atualizações serão voltadas nas seguintes tarefas:
 
-- [x] Finalização da Página de Login
-- [x] Finalização da Página de Cadastro
-- [x] Implementação do JS e Backend
+- [] Finalização da Página de Login
+- [] Finalização da Página de Cadastro
+- [] Implementação do JS e Backend
 
 ## ☕ Usando <nome_do_projeto>
 
