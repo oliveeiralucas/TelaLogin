@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-  <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-  <title>Login</title>
+    <title>Login</title>
 </head>
+
 <body>
     <section>
         <div class="layout">
@@ -14,26 +16,93 @@
                     <h2>Login</h2>
                     <div class="caixa-entrada">
                         <ion-icon name="mail-outline"></ion-icon>
-                        <input type="name" required>
+                        <input type="name" id="username" required>
                         <label for="">Usuário</label>
+                    </div>
+                    <div class="caixa-entrada">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                        <input type="password" id="password" required>
+                        <label for="">Senha</label>
+                    </div>
+                    <div class="esquecer">
+                        <label for="remember"><input type="checkbox" id="remember">Lembrar de mim</label>
+                        <label for=""><a href="#" onclick="showRecuperarSenha()">Esqueceu a Senha?</a></label>
+                    </div>
+
+                    <button>Log in</button>
+                    <div class="registro">
+                        <p>Não tem conta? <a href="#" onclick="showCadastro()">Cadastre-se</a></p>
+                    </div>
+                </form>
+            </div>
+
+            <div class="formulário recuperação-senha" style="display: none">
+                <form action="">
+                    <h2>Recuperar Senha</h2>
+                    <div class="caixa-entrada">
+                        <ion-icon name="mail-outline"></ion-icon>
+                        <input type="email" required>
+                        <label for="">Email</label>
+                    </div>
+                    <button>Enviar</button>
+                    <div class="registro">
+                        <p>Lembrou a senha? <a href="#" onclick="showLogin()">Voltar ao login</a></p>
+                    </div>
+                </form>
+            </div>
+
+
+            <div class="formulário cadastro" style="display: none">
+                <form action="">
+                    <h2>Cadastro</h2>
+                    <div class="caixa-entrada">
+                        <ion-icon name="person-outline"></ion-icon>
+                        <input type="text" required>
+                        <label for="">Nome completo</label>
+                    </div>
+                    <div class="caixa-entrada">
+                        <ion-icon name="mail-outline"></ion-icon>
+                        <input type="email" required>
+                        <label for="">Email</label>
                     </div>
                     <div class="caixa-entrada">
                         <ion-icon name="lock-closed-outline"></ion-icon>
                         <input type="password" required>
                         <label for="">Senha</label>
                     </div>
-                    <div class="esquecer">
-                        <label for=""><input type="checkbox">Lembrar de mim</label>
-                        <label for=""><a href="#">Esquecer Senha</a></label>
-                    </div>
-                         
-                    <button>Log in</button>
+                    <button>Cadastrar</button>
                     <div class="registro">
-                        <p>Não tem conta? <a href="#">Cadastre-se</a></p>
+                        <p>Já tem uma conta? <a href="#" onclick="showLogin()">Voltar ao login</a></p>
                     </div>
                 </form>
             </div>
-        </div>
     </section>
+
+    <script>
+        const loginForm = document.querySelector('.formulário:not(.cadastro)');
+        const cadastroForm = document.querySelector('.formulário.cadastro');
+        const recuperarSenhaForm = document.querySelector('.formulário.recuperação-senha');
+
+        function showLogin() {
+            loginForm.style.display = 'block';
+            cadastroForm.style.display = 'none';
+            recuperarSenhaForm.style.display = 'none';
+        }
+
+        function showCadastro() {
+            loginForm.style.display = 'none';
+            cadastroForm.style.display = 'block';
+            recuperarSenhaForm.style.display = 'none';
+        }
+
+        function showRecuperarSenha() {
+            loginForm.style.display = 'none';
+            cadastroForm.style.display = 'none';
+            recuperarSenhaForm.style.display = 'block';
+        }
+
+    </script>
+
 </body>
+
 </html>
