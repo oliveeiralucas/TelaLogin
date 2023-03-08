@@ -12,9 +12,8 @@ O projeto ainda está em desenvolvimento e as próximas atualizações serão vo
 - [ ] Finalização da Página de Cadastro
 - [ ] Implementação do JS e Backend
 
-## ☕ Usando <nome_do_projeto>
-
-Para usar <nome_do_projeto>, siga estas etapas:
+## ☕ Como usar?
+Para usar o projeto, siga estas etapas:
 
 ```
 <Baixe os arquivos e execute em um programa que tenha suporte para HTML5 e CSS3>
