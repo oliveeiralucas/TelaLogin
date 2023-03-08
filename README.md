@@ -1,4 +1,4 @@
-# telaLogin
+# telaL&C
 
 > Esse é um projeto desenvolvido para testar e demonstrar nossas habilidades em HTML e CSS, consiste em uma página de Login e uma de Cadastro
 
